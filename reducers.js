@@ -1,13 +1,17 @@
-import { VisibilityFilters } from './actions';
+import { VisibilityFilters, SET_VISIBILITY_FILTER } from './actions';
 
 const intialState = {
     visibilityFilter: VisibilityFilters.SHOW_ALL,
     todos: []
 }
 
-function todoApp(state, action) {
-    if (typeof state === 'undefined') {
-        return intialState;
+function todoApp(state = initialState, action) {
+    switch (action.type) {
+        case SET_VISIBILITY_FILTER:
+            return Object.assign({}, state, {
+                visibilityFilter: action.filter
+            })
+        default:
+            return state
     }
-    return state;
 }
