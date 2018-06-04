@@ -9,6 +9,7 @@
   "author": "Kyle Rhodes",
   "license": "ISC",
   "dependencies": {
-    "react": "^16.4.0"
+    "react": "^16.4.0",
+    "redux": "^4.0.0"
   }
 }
