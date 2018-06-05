@@ -2,10 +2,11 @@ import {
     VisibilityFilters, 
     SET_VISIBILITY_FILTER,
     ADD_TODO,
-    SET_VISIBILITY_FILTER 
+    TOGGLE_TODO 
 } from './actions';
-import { combineReducers } from 'redux';
+import redux from 'redux'
 
+const combineReducers = redux.combineReducers
 const { SHOW_ALL } = VisibilityFilters;
 
 
