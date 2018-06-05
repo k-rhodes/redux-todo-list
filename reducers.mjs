@@ -12,7 +12,7 @@ const { SHOW_ALL } = VisibilityFilters;
 
 function todos(state = [], action) {
     switch (action.type) {
-        case actions.ADD_TODO: 
+        case actions.ADD_TODO:  
             return [
                 ...state,
                 {
