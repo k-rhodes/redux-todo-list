@@ -12,7 +12,7 @@ const { SHOW_ALL } = VisibilityFilters;
 
 function todos(state = [], action) {
     switch (action.type) {
-        case actions.ADD_TODO:  
+        case ADD_TODO:  
             return [
                 ...state,
                 {
@@ -20,7 +20,7 @@ function todos(state = [], action) {
                     completed: false
                 }
             ];
-        case actions.TOGGLE_TODO:
+        case TOGGLE_TODO:
             return state.map((todo, index) => {
                 if (index === action.index) {
                     return Object.assign({}, todo, {
@@ -35,7 +35,7 @@ function todos(state = [], action) {
 
 function visibilityFilter(state = SHOW_ALL, action) {
     switch (action.type) {
-        case actions.SET_VISIBILITY_FILTER:
+        case SET_VISIBILITY_FILTER:
             return action.filter;
         default:
             return state;
@@ -46,3 +46,5 @@ const todoApp = redux.combineReducers({
     visibilityFilter,
     todos
 })
+
+export default todoApp

@@ -1,12 +1,12 @@
 // action types
 
-const ADD_TODO = 'ADD_TODO';
-const TOGGLE_TODO = 'TOGGLE_TODO';
-const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
+export const ADD_TODO = 'ADD_TODO';
+export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 
 // other constants
 
-const VisibilityFilters = {
+export const VisibilityFilters = {
     SHOW_ALL: 'SHOW_ALL',
     SHOW_COMPLETED: 'SHOW_COMPLETED',
     SHOW_ACTIVE: 'SHOW_ACTIVE'
@@ -14,24 +14,24 @@ const VisibilityFilters = {
 
 // action creators
 
-function addTodo(text) {
+export function addTodo(text) {
     return { type: ADD_TODO, text }
 }
 
-function toggleTodo(index){
+export function toggleTodo(index){
     return { type: TOGGLE_TODO, index }
 }
 
-function setVisibilityFilter(filter){
+export function setVisibilityFilter(filter){
     return { type: SET_VISIBILITY_FILTER, filter }
 }
 
-module.exports = {
-    ADD_TODO,
-    TOGGLE_TODO,
-    SET_VISIBILITY_FILTER,
-    VisibilityFilters,
-    addTodo,
-    toggleTodo,
-    setVisibilityFilter
-}
+// module.exports = {
+//     ADD_TODO,
+//     TOGGLE_TODO,
+//     SET_VISIBILITY_FILTER,
+//     VisibilityFilters,
+//     addTodo,
+//     toggleTodo,
+//     setVisibilityFilter
+// }
